@@ -1,5 +1,5 @@
 ## setting working directory
-path <- "/Volumes/External SD/AnalyticsVidhya/LastManStanding"
+path <- "./LastManStanding"
 setwd(path)
 
 
@@ -10,8 +10,8 @@ library(xgboost)
 
 
 ## loading data
-train <- read.csv("./Raw/Train_Fyxd0t8.csv")
-test <- read.csv("./Raw/Test_C1XBIYq.csv")
+train <- read.csv("./Train_Fyxd0t8.csv")
+test <- read.csv("./Test_C1XBIYq.csv")
 
 
 ## preparing data
@@ -255,4 +255,4 @@ submit$Crop_Damage[submit$ID %in% test$ID[test$Number_Doses_Week == 0]] <- 1
 
 # saving output
 submit <- submit[,c("ID","Crop_Damage")]
-write.csv(submit, "./Submission/submit.csv", row.names=F)
+write.csv(submit, "./submit.csv", row.names=F)
