@@ -110,7 +110,7 @@ for (i in 1:(nrow(X_panel)-1))
   
   if (X_panel$Group_Last[i] == 1 & X_panel$Soil_Type[i] != X_panel$Soil_Type[i+1])
   {
-    X_panel$Soil[i] <- 1
+    X_panel$Soil_Change[i] <- 1
   }
 }
 
